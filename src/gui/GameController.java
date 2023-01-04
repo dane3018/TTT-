@@ -2,12 +2,15 @@ package gui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.awt.*;
 
 public class GameController {
 
+    // represent the X's and O's.
+    // these are already laoded into the program, with 0 opacity
     @FXML
     private Label xl1;
     @FXML
@@ -45,7 +48,26 @@ public class GameController {
     @FXML
     private Label ol9;
 
-    public void handleButtonClick(ActionEvent e){
+    // the buttons
+    @FXML
+    private Button b1;
+    @FXML
+    private Button b2;
+    @FXML
+    private Button b3;
+    @FXML
+    private Button b4;
+    @FXML
+    private Button b5;
+    @FXML
+    private Button b6;
+    @FXML
+    private Button b7;
+    @FXML
+    private Button b8;
+    @FXML
+    private Button b9;
+    public void handleButtonClick(){
 
     }
 }
