@@ -54,25 +54,37 @@ public class GameController {
         labels[7] = xl8;
         labels[8] = xl9;
     }
+    public void resetLabels(){
+        for(var label : labels){
+            label.setOpacity(0);
+            label.setText("X");
+        }
+    }
 
     public void handleButtonClick() {
         if (guiGame.game.isMoveValid(curMove)) {
             if (guiGame.game.getTurn() == 1) {
                 labels[curMove].setOpacity(1);
                 guiGame.game.makeMove(curMove);
-                if (guiGame.game.isWin() || guiGame.game.isDraw()) {
+                if (guiGame.game.isWin()) {
                     guiGame.goEndScene();
                 }
+
             } else {
                 labels[curMove].setText("O");
                 labels[curMove].setOpacity(1);
                 guiGame.game.makeMove(curMove);
-                if (guiGame.game.isWin() || guiGame.game.isDraw()) {
+                if (guiGame.game.isWin()) {
+                    guiGame.endController.overText.setText("PLAYER O WINS");
                     guiGame.goEndScene();
                 }
 
                 // game.setBoard();
 
+            }
+            if(guiGame.game.isDraw()){
+                guiGame.endController.overText.setText("DRAW");
+                guiGame.goEndScene();
             }
         }
         else{

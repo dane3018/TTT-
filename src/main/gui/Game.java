@@ -20,6 +20,12 @@ public class Game extends Application {
     this.primaryStage.setScene(this.endScene);
     }
 
+    public void goMainScene(){
+        gameController.resetLabels();
+        game = new TicTacToe();
+        this.primaryStage.setScene(this.mainScene);
+    }
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Game.class.getResource("Game.fxml"));

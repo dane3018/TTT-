@@ -17,6 +17,6 @@
             <Font name="Century Schoolbook" size="41.0" />
          </font>
       </Text>
-      <Button layoutX="323.0" layoutY="536.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="78.0" text="RESTART" />
+      <Button layoutX="309.0" layoutY="530.0" mnemonicParsing="false" onAction="#handleRestart" prefHeight="35.0" prefWidth="81.0" text="RESTART" />
    </children>
 </AnchorPane>
