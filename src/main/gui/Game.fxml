@@ -12,15 +12,15 @@
         <Line endX="466.66" endY="700.0" startX="466.66" />
         <Line endX="700.0" endY="233.33" startY="233.33" />
         <Line endX="700.0" endY="466.66" startY="466.66" />
-      <Button fx:id="b1" layoutX="2.0" mnemonicParsing="false" onAction="#handleb1" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
-      <Button fx:id="b2" layoutX="234.0" mnemonicParsing="false" onAction="#handleb2" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
-      <Button fx:id="b3" layoutX="466.0" mnemonicParsing="false" onAction="#handleb3" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
-      <Button fx:id="b4" layoutY="233.0" mnemonicParsing="false" onAction="#handleb4" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
-      <Button fx:id="b5" layoutX="234.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleb5" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
-      <Button fx:id="b6" layoutX="466.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleb6" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
-      <Button fx:id="b7" layoutY="466.0" mnemonicParsing="false" onAction="#handleb7" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
-      <Button fx:id="b8" layoutX="234.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleb8" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
-      <Button fx:id="b9" layoutX="466.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleb9" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
+      <Button fx:id="b1" layoutX="2.0" mnemonicParsing="false" onAction="#handleButtonClick" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
+      <Button fx:id="b2" layoutX="234.0" mnemonicParsing="false" onAction="#handleButtonClick" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
+      <Button fx:id="b3" layoutX="466.0" mnemonicParsing="false" onAction="#handleButtonClick" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
+      <Button fx:id="b4" layoutY="233.0" mnemonicParsing="false" onAction="#handleButtonClick" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
+      <Button fx:id="b5" layoutX="234.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleButtonClick" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
+      <Button fx:id="b6" layoutX="466.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleButtonClick" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
+      <Button fx:id="b7" layoutY="466.0" mnemonicParsing="false" onAction="#handleButtonClick" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
+      <Button fx:id="b8" layoutX="234.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleButtonClick" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
+      <Button fx:id="b9" layoutX="466.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleButtonClick" opacity="0.0" prefHeight="233.33" prefWidth="231.33" />
       <Label fx:id="ol1" layoutX="77.0" layoutY="45.0" opacity="0.0" prefHeight="142.0" prefWidth="77.0" text="O">
          <font>
             <Font size="96.0" />
