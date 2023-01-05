@@ -67,6 +67,7 @@ public class GameController {
                 labels[curMove].setOpacity(1);
                 guiGame.game.makeMove(curMove);
                 if (guiGame.game.isWin()) {
+                    guiGame.endController.overText.setText("PLAYER X WINS");
                     guiGame.goEndScene();
                 }
 

@@ -16,6 +16,7 @@ public class Game extends Application {
     TicTacToe game = new TicTacToe();
     Scene mainScene;
     Scene endScene;
+    Scene beginScene;
 
     public void goEndScene(){
     this.primaryStage.setScene(this.endScene);
@@ -41,10 +42,15 @@ public class Game extends Application {
         endController = fxmlLoaderEnd.getController();
         endController.setGuiGame(this);
 
+        // setting up the begin scene
+        FXMLLoader fxmlLoaderBegin = new FXMLLoader(Game.class.getResource("Begin.fxml"));
+        beginScene = new Scene(fxmlLoaderBegin.load(), 700, 700);
+        beginController = fxmlLoaderBegin.getController();
+        beginController.setGuiGame(this);
 
         this.primaryStage = primaryStage;
         primaryStage.setTitle("TicTacToe");
-        primaryStage.setScene(mainScene);
+        primaryStage.setScene(beginScene);
         primaryStage.show();
     }
     public static void main(String[] args) {
