@@ -18,6 +18,7 @@ public class Game extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 700, 700);
         gameController = fxmlLoader.getController();
         gameController.setGame(game);
+        gameController.setLabels();
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(scene);
         primaryStage.show();
