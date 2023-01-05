@@ -14,8 +14,8 @@ import java.util.Map;
 
 public class GameController {
 
-    TicTacToe game;
-
+//    TicTacToe game;
+    Game guiGame;
     private int curMove;
     private Label[] labels;
 
@@ -41,6 +41,7 @@ public class GameController {
     @FXML
     private Label xl9;
 
+
     public void setLabels(){
         labels = new Label[9];
         labels[0] = xl1;
@@ -54,26 +55,33 @@ public class GameController {
         labels[8] = xl9;
     }
 
-    public void handleButtonClick(){
-        if(game.isMoveValid(curMove)){
-            if(game.getTurn() == 1){
+    public void handleButtonClick() {
+        if (guiGame.game.isMoveValid(curMove)) {
+            if (guiGame.game.getTurn() == 1) {
                 labels[curMove].setOpacity(1);
-            }
-            else{
+                guiGame.game.makeMove(curMove);
+                if (guiGame.game.isWin() || guiGame.game.isDraw()) {
+                    guiGame.goEndScene();
+                }
+            } else {
                 labels[curMove].setText("O");
                 labels[curMove].setOpacity(1);
+                guiGame.game.makeMove(curMove);
+                if (guiGame.game.isWin() || guiGame.game.isDraw()) {
+                    guiGame.goEndScene();
+                }
+
+                // game.setBoard();
+
             }
-            game.makeMove(curMove);
-           // game.setBoard();
         }
         else{
             System.out.println("Invalid Move");
         }
-
     }
 
-    public void setGame(TicTacToe game) {
-        this.game = game;
+    public void setGuiGame(Game guiGame) {
+        this.guiGame = guiGame;
     }
 
     public void handleb1(MouseEvent e){
