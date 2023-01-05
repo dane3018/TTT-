@@ -9,14 +9,21 @@ public class TicTacToe {
     public Piece[] board = new Piece[9];
     // either 0 for O and 1 for X
     public int turn = 1;
+    private AI ai;
 
     public TicTacToe(Piece[] board, int turn) {
         this.board = board;
         this.turn = turn;
     }
-
+    // The main constructor
     public TicTacToe() {
         initBoard();
+    }
+
+    // ai constructor
+    public TicTacToe(AI ai){
+        initBoard();
+        this.ai = ai;
     }
 
     public int getTurn() {
@@ -197,7 +204,7 @@ public class TicTacToe {
 
     public void xVsAI() {
         Scanner input = new Scanner(System.in);
-        AI ai = new AI(this, this);
+        AI ai = new AI(this);
         while (true) {
             System.out.println("Player X: type number 1-9 to place X");
             String num = input.nextLine();
@@ -248,7 +255,7 @@ public class TicTacToe {
     }
     public void oVsAI(){
         Scanner input = new Scanner(System.in);
-        AI ai = new AI(this, this);
+        AI ai = new AI(this);
         while(true){
             makeMove(ai.minimaxAI(this));
             System.out.println("AI Move");

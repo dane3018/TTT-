@@ -6,11 +6,9 @@ import java.util.List;
 public class AI {
     TicTacToe game;
 
-    TicTacToe changeGame;
 
-    public AI(TicTacToe game, TicTacToe changeGame) {
+    public AI(TicTacToe game) {
         this.game = game;
-        this.changeGame = changeGame;
     }
     public List<Integer> allLegalMoves(TicTacToe game){
         List<Integer> list = new ArrayList<>();
@@ -102,7 +100,7 @@ public class AI {
     }
 
     public static void main(String[] args) {
-        AI ai = new AI(new TicTacToe(), new TicTacToe());
+        AI ai = new AI(new TicTacToe());
         TicTacToe game = new TicTacToe();
 //        // turn X
         game.makeMove(8);

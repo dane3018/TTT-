@@ -12,6 +12,7 @@ public class Game extends Application {
     Stage primaryStage;
     GameController gameController;
     EndController endController;
+    BeginController beginController;
     TicTacToe game = new TicTacToe();
     Scene mainScene;
     Scene endScene;
