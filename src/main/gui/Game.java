@@ -23,7 +23,7 @@ public class Game extends Application {
     }
 
     public void goMainScene(){
-        gameController.resetLabels();
+
         this.primaryStage.setScene(this.mainScene);
     }
     public void goBeginScene(){
@@ -32,6 +32,7 @@ public class Game extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+        // setting up main scene
         FXMLLoader fxmlLoader = new FXMLLoader(Game.class.getResource("Game.fxml"));
         mainScene = new Scene(fxmlLoader.load(), 700, 700);
         gameController = fxmlLoader.getController();

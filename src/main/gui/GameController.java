@@ -17,7 +17,8 @@ public class GameController {
 //    TicTacToe game;
     Game guiGame;
     private int curMove;
-    private Label[] labels;
+    // array to hold the labels in an indexed format
+    public Label[] labels;
 
 
     // represent the X's and O's.
@@ -41,7 +42,7 @@ public class GameController {
     @FXML
     private Label xl9;
 
-
+    // Method called at start method
     public void setLabels(){
         labels = new Label[9];
         labels[0] = xl1;
@@ -64,7 +65,6 @@ public class GameController {
     public void handleButtonClick() {
         // when there is an ai player, the human will move first and
         // the ai will respond using this method
-
         if (guiGame.game.isMoveValid(curMove)) {
             if (guiGame.game.getTurn() == 1) {
                 labels[curMove].setOpacity(1);
@@ -83,8 +83,6 @@ public class GameController {
                     guiGame.goEndScene();
                 }
 
-                // game.setBoard();
-
             }
             if(guiGame.game.isDraw()){
                 guiGame.endController.overText.setText("DRAW");
@@ -92,7 +90,6 @@ public class GameController {
             }
             // handles the AI move, if the game is including AI
             if(guiGame.game.isHasAI()){
-                System.out.println("works");
                 int aiMove = guiGame.game.getAi().minimaxAI(guiGame.game);
                 if (guiGame.game.getTurn() == 1) {
                     labels[aiMove].setOpacity(1);
@@ -112,7 +109,10 @@ public class GameController {
                     }
 
                     // game.setBoard();
-
+                }
+                if(guiGame.game.isDraw()){
+                    guiGame.endController.overText.setText("DRAW");
+                    guiGame.goEndScene();
                 }
             }
         }
@@ -121,9 +121,6 @@ public class GameController {
         }
     }
 
-    public void xvsAi(){
-
-    }
 
     public void setGuiGame(Game guiGame) {
         this.guiGame = guiGame;

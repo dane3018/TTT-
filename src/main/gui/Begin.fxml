@@ -18,7 +18,7 @@
          </font>
       </Text>
       <Button layoutX="284.0" layoutY="521.0" mnemonicParsing="false" onAction="#handleXvsAI" prefHeight="42.0" prefWidth="131.0" text="Human (X) vs AI (O)" />
-      <Button layoutX="490.0" layoutY="521.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="131.0" text="AI (X) vs Human (O)" />
+      <Button layoutX="490.0" layoutY="521.0" mnemonicParsing="false" onAction="#handleOvsAI" prefHeight="42.0" prefWidth="131.0" text="AI (X) vs Human (O)" />
       <Button layoutX="78.0" layoutY="521.0" mnemonicParsing="false" onAction="#handleHumanBut" prefHeight="42.0" prefWidth="131.0" text="Human vs Human" />
    </children>
 </AnchorPane>
