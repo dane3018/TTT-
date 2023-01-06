@@ -62,6 +62,9 @@ public class GameController {
     }
 
     public void handleButtonClick() {
+        // when there is an ai player, the human will move first and
+        // the ai will respond using this method
+
         if (guiGame.game.isMoveValid(curMove)) {
             if (guiGame.game.getTurn() == 1) {
                 labels[curMove].setOpacity(1);
@@ -86,6 +89,31 @@ public class GameController {
             if(guiGame.game.isDraw()){
                 guiGame.endController.overText.setText("DRAW");
                 guiGame.goEndScene();
+            }
+            // handles the AI move, if the game is including AI
+            if(guiGame.game.isHasAI()){
+                System.out.println("works");
+                int aiMove = guiGame.game.getAi().minimaxAI(guiGame.game);
+                if (guiGame.game.getTurn() == 1) {
+                    labels[aiMove].setOpacity(1);
+                    guiGame.game.makeMove(aiMove);
+                    if (guiGame.game.isWin()) {
+                        guiGame.endController.overText.setText("AI PLAYER WINS");
+                        guiGame.goEndScene();
+                    }
+
+                } else {
+                    labels[aiMove].setText("O");
+                    labels[aiMove].setOpacity(1);
+                    guiGame.game.makeMove(aiMove);
+                    if (guiGame.game.isWin()) {
+                        guiGame.endController.overText.setText("AI PLAYER WINS");
+                        guiGame.goEndScene();
+                    }
+
+                    // game.setBoard();
+
+                }
             }
         }
         else{

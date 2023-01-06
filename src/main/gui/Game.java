@@ -24,8 +24,10 @@ public class Game extends Application {
 
     public void goMainScene(){
         gameController.resetLabels();
-        game = new TicTacToe();
         this.primaryStage.setScene(this.mainScene);
+    }
+    public void goBeginScene(){
+        this.primaryStage.setScene(this.beginScene);
     }
 
     @Override

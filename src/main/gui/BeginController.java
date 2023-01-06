@@ -13,11 +13,14 @@ public class BeginController {
     }
 
     public void handleHumanBut(javafx.event.ActionEvent event) {
+        guiGame.game = new TicTacToe();
         guiGame.goMainScene();
     }
 
-    public void handleXvsAI(ActionEvent e){
-        guiGame.game = new TicTacToe(new AI(new TicTacToe()));
 
+    public void handleXvsAI(javafx.event.ActionEvent event) {
+        guiGame.game = new TicTacToe(true);
+        guiGame.game.setAi(new AI(guiGame.game));
+        guiGame.goMainScene();
     }
 }

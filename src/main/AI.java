@@ -105,16 +105,13 @@ public class AI {
 //        // turn X
         game.makeMove(8);
 //        // O
-//        game.makeMove(4);
+         game.makeMove(4);
 //        // X
-//        game.makeMove(7);
+        game.makeMove(7);
 //        // O
-//        game.makeMove(5);
+        game.makeMove(5);
 //        //
-//        game.makeMove(0);
-
-
-
+       game.makeMove(0);
         System.out.println(ai.minimaxAI(game));
     }
 }

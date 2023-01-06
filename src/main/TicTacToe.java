@@ -10,6 +10,7 @@ public class TicTacToe {
     // either 0 for O and 1 for X
     public int turn = 1;
     private AI ai;
+    private boolean hasAI;
 
     public TicTacToe(Piece[] board, int turn) {
         this.board = board;
@@ -21,13 +22,22 @@ public class TicTacToe {
     }
 
     // ai constructor
-    public TicTacToe(AI ai){
+    public TicTacToe(Boolean hasAI){
         initBoard();
-        this.ai = ai;
+        this.hasAI = hasAI;
     }
 
     public int getTurn() {
         return turn;
+    }
+
+    public boolean isHasAI() {
+        return hasAI;
+    }
+
+    public AI getAi(){ return ai; }
+    public void setAi(AI ai){
+        this.ai = ai;
     }
 
     public void initBoard() {

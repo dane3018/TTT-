@@ -3,6 +3,7 @@ package main.gui;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
+import main.TicTacToe;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,6 +21,6 @@ public class EndController {
     }
 
     public void handleRestart(){
-        guiGame.goMainScene();
+        guiGame.goBeginScene();
     }
 }
