@@ -93,6 +93,10 @@ public class GameController {
         }
     }
 
+    public void xvsAi(){
+
+    }
+
     public void setGuiGame(Game guiGame) {
         this.guiGame = guiGame;
     }

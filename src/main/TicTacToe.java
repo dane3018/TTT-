@@ -73,6 +73,7 @@ public class TicTacToe {
     }
 
     public boolean isDraw() {
+        if(isWin()) return false;
         for (var piece : board) {
             if (piece.type.equals(Piece.PieceType.EMPTY)) return false;
         }
