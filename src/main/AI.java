@@ -82,8 +82,8 @@ public class AI {
                 newBoard[j] = game.board[j];
             }
             var current = minimax(applyMove(legalMoves.get(i), new TicTacToe(newBoard, game.getTurn())));
-            System.out.println(i+" current is "+ current);
-            System.out.println("turn is"+ game.turn);
+//            System.out.println(i+" current is "+ current);
+//            System.out.println("turn is"+ game.turn);
             if(current == 1 && game.turn == 1){
                 return legalMoves.get(i);
             }
