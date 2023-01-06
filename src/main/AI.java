@@ -82,10 +82,12 @@ public class AI {
                 newBoard[j] = game.board[j];
             }
             var current = minimax(applyMove(legalMoves.get(i), new TicTacToe(newBoard, game.getTurn())));
+            System.out.println(i+" current is "+ current);
+            System.out.println("turn is"+ game.turn);
             if(current == 1 && game.turn == 1){
                 return legalMoves.get(i);
             }
-            if(current == -1 && game.turn == -1){
+            if(current == -1 && game.turn == 0){
                 return legalMoves.get(i);
             }
             minimaxList.add(current);
@@ -93,25 +95,18 @@ public class AI {
 //        for(var m : minimaxList){
 //            System.out.println(m);
 //        }
+//        }
         for(int i = 0; i < minimaxList.size(); i++){
             if(minimaxList.get(i) == 0) return legalMoves.get(i);
         }
-        return legalMoves.get(0);
+        return -1;
     }
 
     public static void main(String[] args) {
         AI ai = new AI(new TicTacToe());
         TicTacToe game = new TicTacToe();
-//        // turn X
-        game.makeMove(8);
-//        // O
-         game.makeMove(4);
-//        // X
-        game.makeMove(7);
-//        // O
-        game.makeMove(5);
-//        //
-       game.makeMove(0);
-        System.out.println(ai.minimaxAI(game));
+        game.makeMove(1);
+        ai.minimaxAI(game);
+
     }
 }
